@@ -40,7 +40,6 @@ public class LongestPath {
     }
 
     public static List<Integer> getCriticalPath(String fileName, int start) throws IOException {
-        List<List<Integer>> graph = GraphDataHelper.parseGraphFromFile(fileName);
         int[] dist = findLongestPaths(fileName, start);
 
         int maxDist = Integer.MIN_VALUE, end = -1;
