@@ -1,0 +1,10 @@
+{ "graph": [
+  {"node": 0, "edges": [4]},
+  {"node": 1, "edges": [6, 7, 0]},
+  {"node": 2, "edges": [7, 0, 5]},
+  {"node": 3, "edges": [5]},
+  {"node": 4, "edges": [7, 3, 2, 6]},
+  {"node": 5, "edges": [2, 0, 4, 7]},
+  {"node": 6, "edges": [3, 2, 1, 4, 7]},
+  {"node": 7, "edges": [1, 3]}
+]}
