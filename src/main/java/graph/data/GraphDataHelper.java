@@ -1,5 +1,6 @@
 package main.java.graph.data;
 
+import main.java.graph.metrics.MetricsTracker;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,6 +11,8 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class GraphDataHelper {
+    private static final MetricsTracker metrics = new MetricsTracker();
+
     public static boolean fileExists(String fileName) {
         File file = new File("./data/" + fileName);
         return file.exists();
@@ -51,6 +54,9 @@ public class GraphDataHelper {
     }
 
     public static List<List<Integer>> tarjanSCC(List<List<Integer>> graph) {
+        metrics.reset();
+        metrics.start();
+
         int n = graph.size();
         int[] ids = new int[n];
         int[] low = new int[n];
@@ -64,16 +70,21 @@ public class GraphDataHelper {
                 dfs(i, graph, ids, low, onStack, stack, sccs, idCounter);
             }
         }
+
+        metrics.stop();
+        System.out.println("Tarjan finished — " + metrics);
         return sccs;
     }
 
     private static void dfs(int at, List<List<Integer>> graph, int[] ids, int[] low,
                             boolean[] onStack, Stack<Integer> stack, List<List<Integer>> sccs, int[] idCounter) {
+        metrics.recordOperation(); // count DFS visit
         stack.push(at);
         onStack[at] = true;
         ids[at] = low[at] = idCounter[0]++;
 
         for (int to : graph.get(at)) {
+            metrics.recordOperation(); // count edge exploration
             if (ids[to] == 0) {
                 dfs(to, graph, ids, low, onStack, stack, sccs, idCounter);
             }

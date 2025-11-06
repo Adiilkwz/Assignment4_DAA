@@ -1,14 +1,14 @@
 { "graph": [
-  {"node": 0, "edges": [8, 7]},
-  {"node": 1, "edges": [6]},
-  {"node": 2, "edges": [4]},
-  {"node": 3, "edges": [11, 6]},
-  {"node": 4, "edges": [8, 0, 6, 5]},
-  {"node": 5, "edges": [11, 6, 1, 7]},
-  {"node": 6, "edges": [5, 11]},
-  {"node": 7, "edges": [5, 0]},
-  {"node": 8, "edges": [7, 3]},
-  {"node": 9, "edges": [4]},
-  {"node": 10, "edges": [4, 11]},
-  {"node": 11, "edges": [7, 3, 5, 4]}
+  {"node": 0, "edges": [8, 5]},
+  {"node": 1, "edges": []},
+  {"node": 2, "edges": [1, 9]},
+  {"node": 3, "edges": []},
+  {"node": 4, "edges": [6, 5, 1, 0, 3]},
+  {"node": 5, "edges": [10, 2]},
+  {"node": 6, "edges": [7]},
+  {"node": 7, "edges": [4, 1]},
+  {"node": 8, "edges": [6, 11]},
+  {"node": 9, "edges": [8, 2, 0, 7]},
+  {"node": 10, "edges": [6, 5]},
+  {"node": 11, "edges": [9, 3, 6, 5]}
 ]}

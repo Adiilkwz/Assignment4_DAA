@@ -1,8 +1,8 @@
 { "graph": [
-  {"node": 0, "edges": [1]},
-  {"node": 1, "edges": []},
-  {"node": 2, "edges": [4]},
-  {"node": 3, "edges": [0, 4]},
-  {"node": 4, "edges": [1]},
-  {"node": 5, "edges": []}
+  {"node": 0, "edges": [5]},
+  {"node": 1, "edges": [5]},
+  {"node": 2, "edges": []},
+  {"node": 3, "edges": []},
+  {"node": 4, "edges": [3, 0]},
+  {"node": 5, "edges": [3]}
 ]}
