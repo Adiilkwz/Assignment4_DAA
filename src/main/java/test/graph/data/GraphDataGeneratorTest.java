@@ -1,5 +1,6 @@
 package main.java.test.graph.data;
 
+import main.java.graph.data.GraphDataHelper;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.*;

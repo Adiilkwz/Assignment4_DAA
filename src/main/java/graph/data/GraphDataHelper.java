@@ -1,4 +1,4 @@
-package main.java.test.graph.data;
+package main.java.graph.data;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
