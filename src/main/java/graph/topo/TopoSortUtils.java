@@ -14,7 +14,7 @@ public class TopoSortUtils {
         for (int u = 0; u < n; u++) {
             for (int v : graph.get(u)) {
                 if (position[u] > position[v]) {
-                    return false; // invalid order
+                    return false;
                 }
             }
         }
